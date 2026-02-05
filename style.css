@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600;700;800&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.container > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1e90ff;
+}
+
+.input-section {
+    background: white;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.input-section input {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.input-section button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background: #0066cc;
+}
+
+/* Certificate Design - Exact Match */
+.certificate {
+    position: relative;
+    width: 960px;
+    height: 670px;
+    background: #f3f5f7;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 36px;
+    margin: 40px auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Grid overlay */
+.certificate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(170,205,235,0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(170,205,235,0.22) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.certificate > * { 
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Corners */
+.corner-tr {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    width: 0; 
+    height: 0;
+    border-top: 140px solid #1a4fd4;
+    border-left: 170px solid transparent;
+    z-index: 0;
+}
+
+.corner-bl {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 0;
+    border-bottom: 140px solid #1a4fd4;
+    border-right: 170px solid transparent;
+    z-index: 0;
+}
+
+/* Accent strips */
+.accent-left {
+    position: absolute; 
+    top: 55px; 
+    left: 0;
+    width: 26px; 
+    height: 175px; 
+    z-index: 0;
+    background: #1a4fd4;
+    clip-path: polygon(35% 0%, 100% 5%, 100% 95%, 35% 100%);
+}
+
+.accent-right {
+    position: absolute; 
+    bottom: 55px; 
+    right: 0;
+    width: 26px; 
+    height: 175px; 
+    z-index: 0;
+    background: #1a4fd4;
+    clip-path: polygon(0% 5%, 65% 0%, 65% 100%, 0% 95%);
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    display: grid;
+    gap: 8px;
+    z-index: 0;
+}
+
+.dots .dot {
+    width: 5px; 
+    height: 5px; 
+    border-radius: 50%;
+    background: #a8c4db;
+}
+
+.dots-tl { 
+    top: 22px; 
+    left: 22px; 
+    grid-template-columns: repeat(6, 5px); 
+}
+
+.dots-br { 
+    bottom: 22px; 
+    right: 22px; 
+    grid-template-columns: repeat(6, 5px); 
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.logo-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+/* Title */
+.title-main {
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: #1a4fd4;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.title-sub {
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: #2c3e50;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.certify-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Name */
+.name-wrap { 
+    text-align: center; 
+    margin-bottom: 6px; 
+}
+
+.recipient-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #1a1a2e;
+    line-height: 1.1;
+}
+
+
+.name-line {
+    width: 350px; 
+    height: 1.5px;
+    background: #2c3e50;
+    margin: 2px auto 0;
+}
+
+/* Completion text */
+.completion-text {
+    font-size: 15.5px;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 26px;
+}
+
+.completion-text strong { 
+    font-weight: 700; 
+}
+.signature-block {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sig-hand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #1a1a2e;
+    transform: rotate(-4deg);
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+.sig-line {
+    width: 160px;
+    height: 1.5px;
+    background: #2c3e50;
+    margin: 0 auto 6px;
+}
+
+.sig-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.sig-title {
+    font-size: 13px;
+    color: #5a6a7a;
+    margin-top: 2px;
+}
+
+
+/* Certificate ID */
+.cert-id {
+    position: absolute;
+    bottom: 16px; 
+    left: 34px;
+    z-index: 1;
+    font-size: 11px;
+    color: #1a1a2e; /* Changed from #5a6a7a to black */
+    line-height: 1.5;
+}
+
+.cert-id strong { 
+    font-weight: 700; 
+    color: #1a1a2e; /* Changed from #2c3e50 to black */
+}
+
+.actions {
+    background: white;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.actions button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.actions button:hover {
+    background: #218838;
+}
+
+@media print {
+    body { margin: 0; padding: 0; }
+    .certificate { 
+        width: 960px; 
+        height: 670px; 
+        margin: 0; 
+        box-shadow: none; 
+    }
+}
